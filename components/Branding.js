@@ -23,8 +23,17 @@ const styles = {
 }
 const Branding = () => (
   <div css={styles.imageWrapper}>
-    {Object.entries(data).map(([key, value]) => (
-      <img css={styles.img} key={key} src={value.src} alt={key} />
+    {Object.entries(data).map(([key, { src }]) => (
+      <img
+        onMouseEnter={e =>
+          (e.currentTarget.src = `/hovered-` + `${src.slice(1)}`)
+        }
+        onMouseOut={e => (e.currentTarget.src = src)}
+        css={styles.img}
+        key={key}
+        src={src}
+        alt={key}
+      />
     ))}
   </div>
 )

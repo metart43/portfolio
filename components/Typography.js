@@ -4,7 +4,6 @@ import { mq } from "../src/util/mediaQueries"
 const styles = {
   header: mq({
     fontWeight: 600,
-    padding: 5,
     fontSize: ["1.25rem", "1.5rem", "1.5rem", "1.75rem"],
     color: "#112d4e",
   }),
