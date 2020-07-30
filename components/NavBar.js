@@ -1,12 +1,23 @@
 import React from "react"
-import { Header, CustomLink } from "./Typography"
+import { Header } from "./Typography"
 import Branding from "./Branding"
 import Divider from "./Divider"
+import { Link } from "gatsby"
+import { mq } from "../src/util/mediaQueries"
 
 const styles = {
   navBar: {
     display: "flex",
   },
+  link: mq({
+    fontSize: ["1rem", "1rem", "1.25rem"],
+    padding: 5,
+    color: "#3f72af",
+  }),
+  linkWrapper: mq({
+    display: "flex",
+    flexDirection: ["column", "column", "row", "row"],
+  }),
 }
 
 const NavBar = () => (
@@ -14,9 +25,20 @@ const NavBar = () => (
     <div css={styles.navBar}>
       <div>
         <Header>Artem Metelskyi</Header>
-        <CustomLink>#work |</CustomLink>
-        <CustomLink>#tech experience |</CustomLink>
-        <CustomLink>#about |</CustomLink>
+        <div css={styles.linkWrapper}>
+          <Link css={styles.link} to="/">
+            #home
+          </Link>
+          <Link css={styles.link} to="#work">
+            #work
+          </Link>
+          <Link css={styles.link} to="#tech-experience">
+            #tech-experience
+          </Link>
+          <Link css={styles.link} to="#about">
+            #about
+          </Link>
+        </div>
       </div>
       <Branding />
     </div>

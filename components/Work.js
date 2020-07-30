@@ -62,12 +62,15 @@ const data = {
 const styles = {
   content: { display: "flex", alignItems: "center", flexDirection: "column" },
   screenshot: mq({
+    // flexGrow: ["1", "1", "0.2", "0.2"],
     width: ["100%", "100%", "200px", "200px"],
   }),
   screenshotWebApp: mq({
+    // flexGrow: ["1", "1", "0.8", "0.8"],
     width: ["100%", "100%", "450px", "450px"],
   }),
   textWrapper: mq({
+    flexGrow: ["1", "1", "0.5", "0.5"],
     width: ["100%", "100%", "450px", "450px"],
   }),
   workWrapper: mq({
@@ -109,9 +112,11 @@ const Work = () => (
             <div style={{ display: "flex", alignSelf: "center" }}>
               {resources
                 ? Object.values(resources).map(({ src, title }, i) => (
-                    <div style={{ display: "flex", flexDirection: "column" }}>
+                    <div
+                      key={i}
+                      style={{ display: "flex", flexDirection: "column" }}
+                    >
                       <img
-                        key={i}
                         onMouseEnter={e =>
                           (e.currentTarget.src =
                             `/hovered-` + `${src.slice(1)}`)

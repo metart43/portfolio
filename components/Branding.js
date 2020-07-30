@@ -3,7 +3,6 @@ import { mq } from "../src/util/mediaQueries"
 
 const data = {
   github: { src: "/github-icon.svg" },
-  //   gitlab: { src: "/gitlab-icon.svg" },
   linkedIn: { src: "/linked-in-icon.svg" },
   twitter: { src: "/twitter-icon.svg" },
   medium: { src: "/medium-icon.svg" },
@@ -14,12 +13,13 @@ const styles = {
     height: [20, 25, 30],
     padding: 5,
   }),
-  imageWrapper: {
+  imageWrapper: mq({
+    display: "flex",
     alignSelf: "flex-end",
     marginLeft: "auto",
-    width: "80px",
     flexWrap: "wrap",
-  },
+    flexDirection: ["column", "column", "row", "row"],
+  }),
 }
 const Branding = () => (
   <div css={styles.imageWrapper}>
