@@ -35,9 +35,13 @@ const NavBar = () => (
           <Link css={styles.link} to="#tech-experience">
             #tech-experience
           </Link>
-          <Link css={styles.link} to="#about">
-            #about
-          </Link>
+          <a
+            css={styles.link}
+            target="_blank"
+            href="mailto:metelskyi88@gmail.com"
+          >
+            #contact-me
+          </a>
         </div>
       </div>
       <Branding />

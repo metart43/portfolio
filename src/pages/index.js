@@ -3,12 +3,14 @@ import Work from "../../components/Work"
 import Bio from "../../components/Bio"
 import NavBar from "../../components/NavBar"
 import { mq } from "../util/mediaQueries"
+import Tech from "../../components/Tech"
+
 const styles = {
   content: mq({
     flex: 1,
     marginRight: "auto",
     marginLeft: "auto",
-    padding: "2rem",
+    padding: "1.5rem",
   }),
 }
 
@@ -17,6 +19,7 @@ const MainProfile = ({ location: { hash } }) => (
     <NavBar />
     {hash === "" ? <Bio /> : null}
     {hash === "#work" ? <Work /> : null}
+    {hash === "#tech-experience" ? <Tech /> : null}
   </div>
 )
 

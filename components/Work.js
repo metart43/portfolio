@@ -1,6 +1,7 @@
 import React from "react"
 import { Header, Subheader } from "./Typography"
 import { mq } from "../src/util/mediaQueries"
+import Divider from "./Divider"
 
 const data = {
   ourstreetsApp: {
@@ -114,7 +115,10 @@ const Work = () => (
                 ? Object.values(resources).map(({ src, title }, i) => (
                     <div
                       key={i}
-                      style={{ display: "flex", flexDirection: "column" }}
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
                     >
                       <img
                         onMouseEnter={e =>
@@ -140,6 +144,7 @@ const Work = () => (
               <Subheader>{description}</Subheader>
             </div>
           </div>
+          {i === Object.values(data).length - 1 ? null : <Divider />}
         </div>
       )
     )}
