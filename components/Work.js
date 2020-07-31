@@ -127,9 +127,8 @@ const styles = {
   icons: {
     width: "30px",
     height: "30px",
-    marginRight: 20,
-    marginLeft: 20,
   },
+  link: { margin: "0px 15px 0px 15px" },
 }
 
 const Work = () => (
@@ -162,7 +161,12 @@ const Work = () => (
                         flexDirection: "column",
                       }}
                     >
-                      <a href={href} target="_blank" rel="noreferrer">
+                      <a
+                        style={{ margin: "0px 15px 0px 15px" }}
+                        href={href}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <img
                           role="presentation"
                           alt={title}

@@ -26,11 +26,18 @@ const styles = {
     flexWrap: "wrap",
     flexDirection: ["column", "column", "row", "row"],
   }),
+  link: { margin: "0px 5px 0px 5px" },
 }
 const Branding = () => (
   <div css={styles.imageWrapper}>
     {Object.entries(data).map(([key, { src, href }]) => (
-      <a key={key} target="_blank" rel="noreferrer" href={href}>
+      <a
+        style={styles.link}
+        key={key}
+        target="_blank"
+        rel="noreferrer"
+        href={href}
+      >
         <img
           role="presentation"
           onMouseEnter={e => (e.currentTarget.src = `/hovered-${src.slice(1)}`)}
