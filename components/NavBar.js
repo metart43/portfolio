@@ -38,6 +38,7 @@ const NavBar = () => (
           <a
             css={styles.link}
             target="_blank"
+            rel="noreferrer"
             href="mailto:metelskyi88@gmail.com"
           >
             #contact-me

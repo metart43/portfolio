@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import Work from "../../components/Work"
 import Bio from "../../components/Bio"
 import NavBar from "../../components/NavBar"

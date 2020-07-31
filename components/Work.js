@@ -12,9 +12,22 @@ const data = {
           Native and Expo.`,
     src: "/ourstreets-app.png",
     resources: {
-      youtube: { url: "", src: "/youtube-icon.svg", title: "demo" },
-      playStore: { url: "", src: "/play-store-icon.svg", title: "andrd" },
-      appleStore: { url: "", src: "/apple-icon.svg", title: "apple" },
+      youtube: {
+        href: "https://www.youtube.com/watch?v=eGCN-3jWik0",
+        src: "/youtube-icon.svg",
+        title: "demo",
+      },
+      playStore: {
+        href:
+          "https://play.google.com/store/apps/details?id=com.ourstreets.reporter",
+        src: "/play-store-icon.svg",
+        title: "andrd",
+      },
+      appleStore: {
+        href: "https://apps.apple.com/us/app/ourstreets/id1494198355?ls=1",
+        src: "/apple-icon.svg",
+        title: "apple",
+      },
     },
     webApp: false,
   },
@@ -24,8 +37,17 @@ const data = {
       "OurStreets Supplies was a feature in the OurStreets app allowing users to report and search the availability of essential supplies during the shortages during the initial stages of the COVID-19 pandemic.",
     src: "/ourstreets-supplies.png",
     resources: {
-      youtube: { url: "", src: "/youtube-icon.svg", title: "demo" },
-      medium: { url: "", src: "/medium-icon.svg", title: "blog" },
+      youtube: {
+        href: "https://www.youtube.com/watch?v=2ESxVeEbnWo",
+        src: "/youtube-icon.svg",
+        title: "demo",
+      },
+      medium: {
+        href:
+          "https://medium.com/ourstreets/one-month-of-supplies-a1ad9a07c374",
+        src: "/medium-icon.svg",
+        title: "blog",
+      },
     },
     webApp: false,
   },
@@ -43,9 +65,21 @@ const data = {
     webApp: true,
     src: "/hidden-gem.png",
     resources: {
-      js: { url: "", src: "/js.svg", title: "repo" },
-      ruby: { url: "", src: "/ruby.svg", title: "repo" },
-      youtube: { url: "", src: "/youtube-icon.svg", title: "demo" },
+      js: {
+        href: "https://github.com/metart43/spotify_frontend",
+        src: "/js.svg",
+        title: "repo",
+      },
+      ruby: {
+        href: "https://github.com/metart43/spotify_backend",
+        src: "/ruby.svg",
+        title: "repo",
+      },
+      youtube: {
+        href: "https://www.youtube.com/watch?v=mBcwxlBNTu0&feature=youtu.be",
+        src: "/youtube-icon.svg",
+        title: "demo",
+      },
     },
   },
   insultApp: {
@@ -55,8 +89,16 @@ const data = {
     description:
       "Twitter mock-up. App allows user to create a group, send a message to the user, search for users, and invite a user to a specific group. Front-End and Back-End of the application is built usin Ruby on Rails; PostgreSQL - used for data management",
     resources: {
-      ruby: { url: "", src: "/ruby.svg", title: "repo" },
-      youtube: { url: "", src: "/youtube-icon.svg", title: "demo" },
+      ruby: {
+        href: "https://github.com/metart43/insult_app",
+        src: "/ruby.svg",
+        title: "repo",
+      },
+      youtube: {
+        href: "https://www.youtube.com/watch?v=aaimNZyetwI&feature=youtu.be",
+        src: "/youtube-icon.svg",
+        title: "demo",
+      },
     },
   },
 }
@@ -112,7 +154,7 @@ const Work = () => (
             <Header>{title}</Header>
             <div style={{ display: "flex", alignSelf: "center" }}>
               {resources
-                ? Object.values(resources).map(({ src, title }, i) => (
+                ? Object.values(resources).map(({ src, title, href }, i) => (
                     <div
                       key={i}
                       style={{
@@ -120,15 +162,19 @@ const Work = () => (
                         flexDirection: "column",
                       }}
                     >
-                      <img
-                        onMouseEnter={e =>
-                          (e.currentTarget.src =
-                            `/hovered-` + `${src.slice(1)}`)
-                        }
-                        onMouseOut={e => (e.currentTarget.src = src)}
-                        css={styles.icons}
-                        src={src}
-                      />
+                      <a href={href} target="_blank" rel="noreferrer">
+                        <img
+                          role="presentation"
+                          alt={title}
+                          onMouseEnter={e =>
+                            (e.currentTarget.src = `/hovered-${src.slice(1)}`)
+                          }
+                          onMouseOut={e => (e.currentTarget.src = src)}
+                          onBlur={e => (e.currentTarget.src = src)}
+                          css={styles.icons}
+                          src={src}
+                        />
+                      </a>
                       {title ? title : null}
                     </div>
                   ))
@@ -137,6 +183,7 @@ const Work = () => (
           </div>
           <div css={styles.workWrapper}>
             <img
+              alt={title}
               css={webApp ? styles.screenshotWebApp : styles.screenshot}
               src={src}
             />

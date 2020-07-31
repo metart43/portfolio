@@ -1,6 +1,5 @@
 import React from "react"
 import { RegularText } from "./Typography"
-import Divider from "./Divider"
 
 const Bio = () => (
   <div>

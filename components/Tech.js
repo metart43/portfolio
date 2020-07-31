@@ -1,10 +1,11 @@
 import React from "react"
 import { mq } from "../src/util/mediaQueries"
+import Divider from "./Divider"
 
 const data = {
   ourStreets: {
     title: "OurStreets",
-    logo: "/hmd-logo.png",
+    logo: "/ourstreets-logo.jpg",
     position: "Full-Stack Web Developer",
     duration: "Nov 2019 — July 2020",
     description:
@@ -21,7 +22,7 @@ const data = {
   },
   flatiron: {
     title: "Flatiron",
-    logo: "/hmd-logo.png",
+    logo: "/flatiron-logo.png",
     position: "Student",
     duration: "Jan 2019 - April 2019",
     description: `During 4 months of the immersive bootcamp, I was able to learn and solidify core concepts of Test Driven and Full Stack Development (React.js/Ruby On Rails) by completing code challanges and working on projects. I successfully learned the basics of two programming languages. The entire course was divided into 2 parts. The first part was dedicated to the core concepts of Ruby following by the process of getting to know Ruby On Rails framework. 
@@ -33,17 +34,13 @@ const styles = {
   wrapper: mq({
     display: "flex",
     flexDirection: "column",
-    alignItems: ["center"],
+    alignItems: "center",
     justifyContent: "space-around",
   }),
   card: mq({
     margin: 10,
-    borderRadius: "20px",
-    borderColor: "black",
-    // flexBasis: 0.,
     width: ["auto", "auto", "70%", "70%"],
     height: "auto",
-    border: "solid 1px",
     padding: 20,
   }),
   cardHeader: mq({
@@ -70,6 +67,7 @@ const Tech = () => (
         <div css={styles.card} key={i}>
           <div style={{ display: "flex", alignItems: "center" }}>
             <img
+              alt={title}
               src={logo}
               style={{ width: 30, height: 30, marginRight: 10 }}
             />
@@ -78,6 +76,7 @@ const Tech = () => (
           <div css={styles.cardSubtitle}>{position}</div>
           <div css={styles.cardSubtitle}>{duration}</div>
           <div css={styles.cardBody}>{description}</div>
+          <Divider />
         </div>
       )
     )}
