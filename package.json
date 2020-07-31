@@ -2,7 +2,7 @@
   "name": "metelsktyi-potfolio",
   "private": false,
   "description": "Personal website build with Gatsby",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
@@ -29,6 +29,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/metart43/portfolio"
   }
 }
