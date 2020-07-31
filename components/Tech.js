@@ -38,7 +38,6 @@ const styles = {
     justifyContent: "space-around",
   }),
   card: mq({
-    margin: 10,
     width: ["auto", "auto", "70%", "70%"],
     height: "auto",
     padding: 20,

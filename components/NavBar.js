@@ -41,7 +41,7 @@ const NavBar = () => (
             rel="noreferrer"
             href="mailto:metelskyi88@gmail.com"
           >
-            #contact-me
+            #email-me
           </a>
         </div>
       </div>

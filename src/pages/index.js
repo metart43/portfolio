@@ -4,6 +4,7 @@ import Bio from "../../components/Bio"
 import NavBar from "../../components/NavBar"
 import { mq } from "../util/mediaQueries"
 import Tech from "../../components/Tech"
+import { Helmet } from "react-helmet"
 
 const styles = {
   content: mq({
@@ -16,6 +17,11 @@ const styles = {
 
 const MainProfile = ({ location: { hash } }) => (
   <div css={styles.content}>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>{hash || "Artem Metelskyi"}</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
     <NavBar />
     {hash === "" ? <Bio /> : null}
     {hash === "#work" ? <Work /> : null}
