@@ -11,7 +11,7 @@ const styles = {
     flex: 1,
     marginRight: "auto",
     marginLeft: "auto",
-    padding: "1.5rem",
+    maxWidth: 1280,
   }),
 }
 
