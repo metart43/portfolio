@@ -13,7 +13,7 @@ const Bio = () => (
         I write code in Javascript and Ruby. In January of 2019, I enrolled at
         Flatiron Full-Stack Web Development Bootcamp; I graduated in April of
         2019. Immediately after graduation, I joined the local start-up company
-        "How's My Driving", as a Full-Stack Developer, to work a on progressive
+        "How's My Driving", as a Full-Stack Developer, to work on a progressive
         web application that served as a tool for dangerous driving reporting.
         In November, 2019 after the company evolved into "OurStreets App", I was
         hired on a full-time basis to convert a PWA into the new native app.
