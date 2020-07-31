@@ -1,7 +1,7 @@
 import React from "react"
 import { mq } from "../src/util/mediaQueries"
 import Divider from "./Divider"
-import styled from "@emotion/styled"
+import styled from "styled-components"
 
 const data = {
   ourStreets: {

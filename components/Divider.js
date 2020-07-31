@@ -1,4 +1,4 @@
-import styled from "@emotion/styled"
+import styled from "styled-components"
 
 const Divider = styled.hr`
   margin-top: 15px;

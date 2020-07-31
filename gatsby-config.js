@@ -6,13 +6,5 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [
-    {
-      resolve: `gatsby-plugin-emotion`,
-      options: {
-        // Accepts all options defined by `babel-plugin-emotion` plugin.
-      },
-    },
-    `gatsby-plugin-react-helmet`,
-  ],
+  plugins: [`gatsby-plugin-react-helmet`, `gatsby-plugin-styled-components`],
 }
