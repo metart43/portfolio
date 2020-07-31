@@ -20,9 +20,9 @@ const MainProfile = ({ location: { hash } }) => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>{hash || "Artem Metelskyi"}</title>
-      <link rel="canonical" href="http://mysite.com/example" />
+      <link rel="canonical" href="https://www.metelskyi.me/" />
     </Helmet>
-    <NavBar />
+    <NavBar hash={hash} />
     {hash === "" ? <Bio /> : null}
     {hash === "#work" ? <Work /> : null}
     {hash === "#tech-experience" ? <Tech /> : null}

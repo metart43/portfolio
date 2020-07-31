@@ -9,10 +9,15 @@ const styles = {
   navBar: {
     display: "flex",
   },
-  link: mq({
+  activeLink: mq({
     fontSize: ["1rem", "1rem", "1.25rem"],
     padding: 5,
     color: "#3f72af",
+  }),
+  link: mq({
+    fontSize: ["1rem", "1rem", "1.25rem"],
+    padding: 5,
+    color: "black",
   }),
   linkWrapper: mq({
     display: "flex",
@@ -20,21 +25,26 @@ const styles = {
   }),
 }
 
-const NavBar = () => (
+const paths = ["#work", "#tech-experience"]
+
+const NavBar = ({ hash }) => (
   <div>
     <div css={styles.navBar}>
       <div>
         <Header>Artem Metelskyi</Header>
         <div css={styles.linkWrapper}>
-          <Link css={styles.link} to="/">
+          <Link css={!hash ? styles.activeLink : styles.link} to="/">
             #home
           </Link>
-          <Link css={styles.link} to="#work">
-            #work
-          </Link>
-          <Link css={styles.link} to="#tech-experience">
-            #tech-experience
-          </Link>
+          {paths.map(path => (
+            <Link
+              key={path}
+              css={hash === path ? styles.activeLink : styles.link}
+              to={path}
+            >
+              {path}
+            </Link>
+          ))}
           <a
             css={styles.link}
             target="_blank"
