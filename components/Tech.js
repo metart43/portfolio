@@ -62,24 +62,26 @@ const Wrapper = styled.div`
 
 const Tech = () => (
   <div className="tech">
-    {Object.values(data).map(
-      ({ title, position, duration, description, logo }, i) => (
-        <div css={styles.card} key={i}>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <img
-              alt={title}
-              src={logo}
-              style={{ width: 30, height: 30, marginRight: 10 }}
-            />
-            <div css={styles.cardHeader}>{title}</div>
+    <div className="tech">
+      {Object.values(data).map(
+        ({ title, position, duration, description, logo }, i) => (
+          <div css={styles.card} key={i}>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <img
+                alt={title}
+                src={logo}
+                style={{ width: 30, height: 30, marginRight: 10 }}
+              />
+              <div css={styles.cardHeader}>{title}</div>
+            </div>
+            <div css={styles.cardSubtitle}>{position}</div>
+            <div css={styles.cardSubtitle}>{duration}</div>
+            <div css={styles.cardBody}>{description}</div>
+            <Divider />
           </div>
-          <div css={styles.cardSubtitle}>{position}</div>
-          <div css={styles.cardSubtitle}>{duration}</div>
-          <div css={styles.cardBody}>{description}</div>
-          <Divider />
-        </div>
-      )
-    )}
+        )
+      )}
+    </div>
   </div>
 )
 
