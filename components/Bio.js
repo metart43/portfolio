@@ -24,9 +24,9 @@ const Bio = () => (
         Redux, xState, Storybook, and more.
         <br />
         <br />I am an extremely curious person! Curiosity and willingness to
-        constantly learn new things that's what brought me to coding. Feel free
-        to check out <Link to="#work">#work</Link> section to see what I have
-        built so far.
+        constantly learn new things that's what brought me into coding. Feel
+        free to check out <Link to="#work">#work</Link> section to see what I
+        have built so far.
       </RegularText>
     </div>
   </div>
