@@ -61,7 +61,7 @@ const Wrapper = styled.div`
 `
 
 const Tech = () => (
-  <Wrapper>
+  <div className="tech">
     {Object.values(data).map(
       ({ title, position, duration, description, logo }, i) => (
         <div css={styles.card} key={i}>
@@ -80,7 +80,7 @@ const Tech = () => (
         </div>
       )
     )}
-  </Wrapper>
+  </div>
 )
 
 export default Tech
