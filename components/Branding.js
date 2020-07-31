@@ -11,7 +11,7 @@ const data = {
     href: "https://twitter.com/metelskyi_a",
     src: "/twitter-icon.svg",
   },
-  medium: { href: "https://glitch.com/@metart43", src: "/medium-icon.svg" },
+  gitlab: { href: "https://gitlab.com/metart43", src: "/gitlab-icon.svg" },
 }
 const styles = {
   img: mq({
