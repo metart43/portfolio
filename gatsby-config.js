@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: `gatsby-plugin-emotion`,
+      resolve: [`gatsby-plugin-emotion`, `gatsby-plugin-react-helmet`],
       options: {
         // Accepts all options defined by `babel-plugin-emotion` plugin.
       },
