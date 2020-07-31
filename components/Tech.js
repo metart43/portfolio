@@ -1,6 +1,7 @@
 import React from "react"
 import { mq } from "../src/util/mediaQueries"
 import Divider from "./Divider"
+import styled from "@emotion/styled"
 
 const data = {
   ourStreets: {
@@ -31,12 +32,6 @@ const data = {
 }
 
 const styles = {
-  wrapper: mq({
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "space-around",
-  }),
   card: mq({
     width: ["auto", "auto", "70%", "70%"],
     height: "auto",
@@ -59,8 +54,14 @@ const styles = {
   }),
 }
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const Tech = () => (
-  <div css={styles.wrapper}>
+  <Wrapper>
     {Object.values(data).map(
       ({ title, position, duration, description, logo }, i) => (
         <div css={styles.card} key={i}>
@@ -79,7 +80,7 @@ const Tech = () => (
         </div>
       )
     )}
-  </div>
+  </Wrapper>
 )
 
 export default Tech
