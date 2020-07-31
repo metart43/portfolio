@@ -19,6 +19,7 @@
     "facepaint": "^1.2.1",
     "gatsby": "^2.23.12",
     "gatsby-plugin-emotion": "^4.3.10",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
